@@ -28,7 +28,13 @@ h1 {
     font-weight: 700;
     margin-bottom: 16px;
     background: linear-gradient(to right, #6366f1, #a855f7); /* Efeito de texto gradiente */
-    -webkit-background-clip: text;
+    
+
+    background-clip: text; 
+    
+   
+    -webkit-background-clip: text; 
+    
     -webkit-text-fill-color: transparent;
 }
 
