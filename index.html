@@ -15,11 +15,20 @@
         <p class="descricao">O objetivo desse jogo é adivinhar qual número foi sorteado pelo programa. Você tem 10 tentativas para acertar o número e receberá dicas.</p>
         
         <div class="caixa">
+            <div>
+            <label>Escolha a dificuldade:</label>
+                <select id="dificuldade" onchange="sortear()">
+                    <option value="facil">Fácil</option>
+                    <option value="medio">Médio</option>
+                    <option value="dificil">Difícil</option>
+                </select>
+            </div>
+
             <div class="campo-grupo">
                 <label for="palpite">Digite o seu palpite:</label>
                 <div class="input-container">
                     <input type="number" id="palpite" placeholder="0">
-                    <button onclick="Chutar()">Chutar</button>
+                    <button id="btnChutar" onclick="Chutar()">Chutar</button>
                 </div>
             </div>
             
