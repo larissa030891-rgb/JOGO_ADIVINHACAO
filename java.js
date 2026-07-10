@@ -79,7 +79,21 @@ function Chutar() {
     document.getElementById("resultado").textContent =
         "😢 Você perdeu! O número era " + numero;
 
+    document.getElementById("dica").textContent = "";
+
     document.getElementById("btnChutar").disabled = true;
+
+    tentativa = 0
 }
+
+}
+
+function Reiniciar (){
+
+    tentativa = 0;
+    document.getElementById("tentativas").textContent = tentativa;
+    document.getElementById("resultado").textContent = "";
+    document.getElementById("dica").textContent = "";
+  
 
 }

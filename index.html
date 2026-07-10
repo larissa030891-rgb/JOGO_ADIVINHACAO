@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Adivinhação</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="java.js" defer></script>
 </head>
 <body>
 
     <main class="container">
         <h1>Jogo de Adivinhação</h1>
-        <p class="descricao">O objetivo desse jogo é adivinhar qual número foi sorteado pelo programa. Você tem 10 tentativas para acertar o número e receberá dicas.</p>
-        
+        <p class="descricao">O objetivo desse jogo é adivinhar qual número foi sorteado pelo programa. Você pode escolher o nivel de dificuldade entre Fácil (1 á 50), Médio (1 á 100) e Dificil (1 á 150), e terá 10 tentativas para acertar o número. Boa sorte!</p>
+
         <div class="caixa">
             <div>
             <label>Escolha a dificuldade:</label>
@@ -29,6 +28,7 @@
                 <div class="input-container">
                     <input type="number" id="palpite" placeholder="0">
                     <button id="btnChutar" onclick="Chutar()">Chutar</button>
+                    <button id="reiniciar" onclick="Reiniciar()">Reiniciar</button>
                 </div>
             </div>
             

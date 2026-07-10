@@ -1,4 +1,3 @@
-/* Reset e configurações gerais */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +5,9 @@
 }
 
 body {
-    background-color: #0f172a; /* Azul escuro moderno (Slate 900) */
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #312e81);
+    background-size: 300% 300%;
+    animation: fundo 12s ease infinite;
     font-family: 'Inter', sans-serif; /* Fonte muito usada em interfaces profissionais */
     color: #f8fafc;
     min-height: 100vh;
@@ -16,7 +17,6 @@ body {
     padding: 20px;
 }
 
-/* Container Principal */
 .container {
     width: 100%;
     max-width: 500px;
@@ -28,13 +28,8 @@ h1 {
     font-weight: 700;
     margin-bottom: 16px;
     background: linear-gradient(to right, #6366f1, #a855f7); /* Efeito de texto gradiente */
-    
-
     background-clip: text; 
-    
-   
     -webkit-background-clip: text; 
-    
     -webkit-text-fill-color: transparent;
 }
 
@@ -45,16 +40,20 @@ h1 {
     margin-bottom: 32px;
 }
 
-/* A Caixinha do Jogo */
 .caixa {
-    background-color: #1e293b; /* Fundo cinza-azulada escuro */
-    border: 1px solid #334155;
-    border-radius: 16px;
-    padding: 32px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.3);
+background: rgba(30,41,59,.75);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255,255,255,.08);
+border-radius: 18px;
+padding: 35px;
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+transition:.3s;
+}   
+
+.caixa:hover{
+    transform:translateY(-4px);
 }
 
-/* Formulário e Inputs */
 .campo-grupo {
     display: flex;
     flex-direction: column;
@@ -91,17 +90,18 @@ input[type="number"]:focus {
     border-color: #6366f1; /* Borda acende ao clicar */
 }
 
-/* Botão Estilizado */
-button {
-    background-color: #10b981; /* Verde esmeralda moderno */
-    color: #0f172a;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
+#btnChutar{
+    background:#10b981;
+    color:white;
+}
+
+#reiniciar{
+    background:#6366f1;
+    color:white;
+}
+
+#reiniciar:hover{
+    background:#7c82ff;
 }
 
 button:hover {
@@ -112,7 +112,6 @@ button:active {
     transform: scale(0.98); /* Efeito de clique */
 }
 
-/* Área de Status e Resultados */
 .status-grupo {
     border-top: 1px solid #334155;
     padding-top: 24px;
@@ -127,15 +126,76 @@ h2 {
 
 #tentativas {
     color: #a855f7; /* Cor roxa para destacar o número */
-}
+    }
 
 .feedback-texto {
     margin-top: 12px;
     font-size: 1rem;
     font-weight: 600;
-}
+    }
 
 .dica {
     color: #38bdf8; /* Azul claro para a dica */
     font-style: italic;
+    }
+
+@keyframes fundo {
+    0% {
+    background-position: left;
+    }
+    50% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}
+
+select{
+    width:100%;
+    margin-top:10px;
+    margin-bottom:25px;
+    padding:12px;
+    border-radius:8px;
+    border:2px solid #334155;
+    background:#0f172a;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+select:hover{
+    border-color:#6366f1;
+}
+
+select:focus{
+
+    outline:none;
+    border-color:#a855f7;
+}
+
+button:disabled{
+    background:#555;
+    cursor:not-allowed;
+    opacity:.6;
+}
+
+#resultado{
+    font-size:1.2rem;
+    font-weight:bold;
+    min-height:30px;
+}
+
+#dica{
+    color:#38bdf8;
+    font-size:18px;
+}
+
+input[type="number"]{
+    transition:.3s;
+}
+
+input[type="number"]:focus{
+    transform:scale(1.02);
 }
